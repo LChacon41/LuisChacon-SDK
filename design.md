@@ -38,26 +38,26 @@ Contributions to the Lord of the Rings SDK are welcome. If you find any issues o
 
 Here are some examples of how to use the Lord of the Rings SDK:
 
-from lord_of_the_rings.lord_of_the_rings import LordOfTheRingsClient
+    from lord_of_the_rings.lord_of_the_rings import LordOfTheRingsClient
 
-# Initialize the Lord of the Rings client with the bearer token
-bearer_token = "your_bearer_token_here"
-lotr_client = LordOfTheRingsClient(bearer_token)
+    # Initialize the Lord of the Rings client with the bearer token
+    bearer_token = "your_bearer_token_here"
+    lotr_client = LordOfTheRingsClient(bearer_token)
 
-# Retrieve all movies
-movies = lotr_client.get_movie()
-print(movies)
+    # Retrieve all movies
+    movies = lotr_client.get_movie()
+    print(movies)
 
-# Retrieve a specific movie by ID
-movie_id = "5cd95395de30eff6ebccde5a"
-movie = lotr_client.get_movie(movie_id)
-print(movie)
+    # Retrieve a specific movie by ID
+    movie_id = "5cd95395de30eff6ebccde5a"
+    movie = lotr_client.get_movie(movie_id)
+    print(movie) 
 
-# Retrieve all quotes
-quotes = lotr_client.get_quote()
-print(quotes)
+    # Retrieve all quotes
+    quotes = lotr_client.get_quote()
+    print(quotes)
 
-# Retrieve a specific quote by ID
-quote_id = "5cd96e05de30eff6ebcceb4e"
-quote = lotr_client.get_quote(quote_id)
-print(quote)
+    # Retrieve a specific quote by ID
+    quote_id = "5cd96e05de30eff6ebcceb4e"
+    quote = lotr_client.get_quote(quote_id)
+    print(quote)
