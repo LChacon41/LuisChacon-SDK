@@ -6,8 +6,10 @@ Python SDK for the Lord of the Rings API
 
 To install the Lord of the Rings SDK, you can use pip:
 
-    pip install lord_of_the_rings_sdk.gz
-
+    pip install lord_of_the_rings_sdk-1.0.0.tar.gz
+or
+    pip install dist/lord_of_the_rings_sdk-1.0.0.tar.gz
+    
 # USAGE
 
 Here's an example of how to use the Lord Of The Rings SDK:
