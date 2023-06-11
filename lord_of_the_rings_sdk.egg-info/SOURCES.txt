@@ -4,6 +4,7 @@ examples/__init__.py
 examples/example.py
 lord_of_the_rings/__init__.py
 lord_of_the_rings/lord_of_the_rings.py
+lord_of_the_rings/testsuite.py
 lord_of_the_rings_sdk.egg-info/PKG-INFO
 lord_of_the_rings_sdk.egg-info/SOURCES.txt
 lord_of_the_rings_sdk.egg-info/dependency_links.txt

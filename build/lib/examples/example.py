@@ -1,4 +1,4 @@
-from lord_of_the_rings import LordOfTheRingsClient
+from lord_of_the_rings.lord_of_the_rings import LordOfTheRingsClient
 
 bearer_token = "PMfbTRb3mAnDcB7VoHer"
 
