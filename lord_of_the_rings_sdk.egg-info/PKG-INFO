@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lord-of-the-rings-sdk
+Version: 1.0.0
+Summary: Python SDK for the Lord of the Rings API
+Home-page: https://github.com/LChacon41/LuisChacon-SDK
+Author: Luis Chacon
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+A Python SDK that provides access to the Lord of the Rings API for retrieving movie and quote data.
