@@ -1,59 +1,63 @@
-Lord of the Rings SDK Design
+# Lord of the Rings SDK Design
 
-Overview
+## Overview
 
-The Lord of the Rings SDK provides a Python interface to interact with the Lord of the Rings API. It allows developers to easily access movie and quote data from the Lord of the Rings universe.
-Architecture
+The Lord of the Rings SDK provides a Python interface to interact with the Lord of the Rings API. It allows developers to retrieve movie information, quotes, book information, and book chapters.
 
-The SDK follows a simple client-library design pattern. It encapsulates the logic for making HTTP requests to the Lord of the Rings API and handling the API responses. The SDK utilizes the requests library for making HTTP requests.
-Class Structure
+## SDK Structure
 
-The SDK consists of the following classes:
+The SDK consists of the following main components:
 
-    LordOfTheRingsClient: The main client class that handles the interaction with the Lord of the Rings API. It provides methods to retrieve movie and quote data.
-    LordOfTheRingsError: A custom exception class used to handle errors specific to the Lord of the Rings API.
+- `lord_of_the_rings.py`: This module contains the `LordOfTheRingsClient` class, which encapsulates the API interactions. It provides methods to retrieve movie, quote, book, and chapter data from the Lord of the Rings API.
 
-API Documentation
+- `setup.py`: This file is used for packaging the SDK as a Python package. It includes the necessary metadata and dependencies.
 
-The Lord of the Rings API provides two endpoints that the SDK interacts with:
+- `README.md`: This file provides installation instructions, usage examples, and other information about the SDK.
 
-    /movies: Retrieves information about all movies in the Lord of the Rings universe.
-    /quotes: Retrieves quotes from the Lord of the Rings movies.
+- `design.md`: This file (the current file) provides an overview of the SDK's design, its components, and their interactions.
 
-For both endpoints, the SDK supports optional parameters to filter the results based on movie ID or quote ID.
-Design Decisions
+## Usage
 
-    The SDK uses the requests library for its simplicity and widespread usage in making HTTP requests.
-    The LordOfTheRingsClient class encapsulates the logic for handling HTTP requests, allowing for easy extensibility in case new API endpoints are added in the future.
-    Error handling is centralized within the SDK, with the LordOfTheRingsError class used to raise exceptions for any API-related errors.
+To use the Lord of the Rings SDK in your Python project, follow these steps:
 
-Authentication and Authorization
+1. Install the SDK by running `pip install lord_of_the_rings.gz`.
 
-The Lord of the Rings API requires authentication using a bearer token. The LordOfTheRingsClient class expects the bearer token to be provided during initialization.
-Usage Examples
+2. Import the `LordOfTheRingsClient` class from the `lord_of_the_rings` module.
+
+3. Create an instance of the `LordOfTheRingsClient` class with your bearer token.
+
+4. Use the available methods of the client to interact with the Lord of the Rings API and retrieve the desired data.
+
+## Error Handling
+
+The SDK includes an `LordOfTheRingsError` class to handle errors related to the API. It is raised when an API request returns a non-200 status code. The error class contains the status code and error message received from the API.
+
+## Contributions
+
+Contributions to the Lord of the Rings SDK are welcome. If you find any issues or want to enhance the SDK, feel free to open a pull request on the GitHub repository.
 
 Here are some examples of how to use the Lord of the Rings SDK:
 
-from lord_of_the_rings.client import LordOfTheRingsClient
+    from lord_of_the_rings.lord_of_the_rings import LordOfTheRingsClient
 
-# Initialize the Lord of the Rings client with the bearer token
-bearer_token = "your_bearer_token_here"
-lotr_client = LordOfTheRingsClient(bearer_token)
+    # Initialize the Lord of the Rings client with the bearer token
+    bearer_token = "your_bearer_token_here"
+    lotr_client = LordOfTheRingsClient(bearer_token)
 
-# Retrieve all movies
-movies = lotr_client.get_movie()
-print(movies)
+    # Retrieve all movies
+    movies = lotr_client.get_movie()
+    print(movies)
 
-# Retrieve a specific movie by ID
-movie_id = "5cd95395de30eff6ebccde5a"
-movie = lotr_client.get_movie(movie_id)
-print(movie)
+    # Retrieve a specific movie by ID
+    movie_id = "5cd95395de30eff6ebccde5a"
+    movie = lotr_client.get_movie(movie_id)
+    print(movie) 
 
-# Retrieve all quotes
-quotes = lotr_client.get_quote()
-print(quotes)
+    # Retrieve all quotes
+    quotes = lotr_client.get_quote()
+    print(quotes)
 
-# Retrieve a specific quote by ID
-quote_id = "5cd96e05de30eff6ebcceb4e"
-quote = lotr_client.get_quote(quote_id)
-print(quote)
+    # Retrieve a specific quote by ID
+    quote_id = "5cd96e05de30eff6ebcceb4e"
+    quote = lotr_client.get_quote(quote_id)
+    print(quote)
